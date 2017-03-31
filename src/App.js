@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PlaceList, PlaceItem } from './components/place';
+import { PlaceList } from './components/place';
 import logo from './logo.svg';
 import './App.css';
 
