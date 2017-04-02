@@ -4,7 +4,7 @@ export const PlaceItem = (props) => {
   return(
     <div className='Place-Item'>
       <span>
-        <label>City: San Francisco </label>
+        <label>City: {props.location} </label>
       </span><input type='text' value={props.name}/>
     </div>
   )
