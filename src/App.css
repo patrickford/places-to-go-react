@@ -23,10 +23,17 @@
   to { transform: rotate(360deg); }
 }
 
+.Place-List {
+  
+}
+
 .Place-Item {
-  width: 320px;
+  float: left;
+  position: relative;
+  width: 100px;
+  height: 100px;
   padding: 10px;
   border: 5px solid gray;
-  margin: 0; 
+  margin: 0;
 
 }
