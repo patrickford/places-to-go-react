@@ -7,7 +7,7 @@ class App extends Component {
 
   state = {
     places: [],
-    newPlace: ''
+    newPlace: {name: '', location: ''}
   }
 
   componentDidMount() {
@@ -17,11 +17,13 @@ class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('handleSubmit method called for ' + e.target.value);
+    const newPlace = this.state.newPlace;
+    console.log('handleSubmit method called for ' + this.state.newPlace.name);
   }
 
   handleInputChange = (e) => {
-    this.setState({newPlace: e.target.value});
+    this.setState({newPlace: {name: e.target.value, location: ''}});
+    console.log(this.state.newPlace.name);
   }
 
   render() {
@@ -32,7 +34,7 @@ class App extends Component {
         </div>
         <PlaceList places={this.state.places}/>
         <div className="App-footer">Footer</div>
-        <PlaceForm handleSubmit={this.handleSubmit} handleInputChange={this.handleInputChange} newPlace={this.state.newPlace}/>
+        <PlaceForm handleSubmit={this.handleSubmit} handleInputChange={this.handleInputChange} name={this.state.newPlace.name}/>
       </div>
     );
   }

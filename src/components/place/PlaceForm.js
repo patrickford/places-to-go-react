@@ -6,7 +6,7 @@ export const PlaceForm = (props) => (
       type="text"
       placeholder="where do you wanna go?"
       onChange={props.handleInputChange}
-      value={props.newPlace}
+      value={props.name}
       />
   </form>
 )
