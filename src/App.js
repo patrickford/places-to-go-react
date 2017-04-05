@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { PlaceList, PlaceForm } from './components/place';
 import logo from './logo.svg';
+import { generateId } from './lib/placehelpers';
 import './App.css';
 
 class App extends Component {
 
   state = {
     places: [],
-    newPlace: {name: '', location: ''}
+    newPlace: {id: '', name: '', location: ''}
   }
 
   componentDidMount() {
-    const places = [{name:"Mama's", location:'san francisco'}, {name:"Burgers", location:'san'},{name:"Gott's", location:'francisco'}];
+    const places = [{id: 10101, name:"Mama's", location:'san francisco'}, {id: 10102, name:"Burgers", location:'san'},{id: 10103, name:"Gott's", location:'francisco'}];
     this.setState({places});
   }
 
@@ -23,12 +24,12 @@ class App extends Component {
       places: newPlacesList,
       newPlace: {name: '', location: ''}
     })
-    console.log('handleSubmit method called for ' + this.state.newPlace.name);
+    console.log('handleSubmit method called for ' + this.state.newPlace.id);
   }
 
   handleInputChange = (e) => {
-    this.setState({newPlace: {name: e.target.value, location: ''}});
-    console.log(this.state.newPlace.name);
+    const newId = generateId();
+    this.setState({newPlace: {id: newId, name: e.target.value, location: ''}});
   }
 
   render() {
