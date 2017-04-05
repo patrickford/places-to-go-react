@@ -5,6 +5,15 @@ import './App.css';
 
 class App extends Component {
 
+  state = {
+    places: []
+  }
+
+  componentDidMount() {
+    const places = [{name:"Mama's", location:'san francisco'}, {name:"Burgers", location:'san'},{name:"Gott's", location:'francisco'}];
+    this.setState({places});
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
     console.log('handleSubmit method called!');
@@ -16,7 +25,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
-        <PlaceList />
+        <PlaceList places={this.state.places}/>
         <div className="App-footer">Footer</div>
         <PlaceForm handleSubmit={this.handleSubmit}/>
       </div>
