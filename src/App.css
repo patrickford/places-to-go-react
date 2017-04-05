@@ -14,6 +14,18 @@
   color: white;
 }
 
+.App-footer {
+  position: absolute;
+  background-color: #222;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
 .App-intro {
   font-size: large;
 }
@@ -25,11 +37,6 @@
 
 .Place-List {
 
-}
-
-#Footer {
-  position: relative;
-  color: red;
 }
 
 .Place-Item {
