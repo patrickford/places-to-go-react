@@ -5,10 +5,8 @@ export const PlaceList = (props) => {
   const places = [{name:"Mama's", location:'san francisco'}, {name:"Burgers", location:'san'},{name:"Gott's", location:'francisco'}];
   return(
     <div className="Place-List">
-      <h1>Places I want to visit:</h1>
-      <ul>
-          {places.map( place => (<PlaceItem name={place.name} location={place.location} />))}
-      </ul>
+      <div><h1>Places I want to visit:</h1></div>
+      <div><ul> {places.map( place => (<PlaceItem name={place.name} location={place.location} />))} </ul></div>
     </div>
   )
 }

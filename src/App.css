@@ -24,7 +24,12 @@
 }
 
 .Place-List {
-  
+
+}
+
+#Footer {
+  position: relative;
+  color: red;
 }
 
 .Place-Item {
@@ -34,6 +39,6 @@
   height: 100px;
   padding: 10px;
   border: 5px solid gray;
-  margin: 0;
+  margin: 5px;
 
 }
