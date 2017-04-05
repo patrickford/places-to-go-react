@@ -6,7 +6,8 @@ import './App.css';
 class App extends Component {
 
   state = {
-    places: []
+    places: [],
+    newPlace: ''
   }
 
   componentDidMount() {
@@ -16,7 +17,11 @@ class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('handleSubmit method called!');
+    console.log('handleSubmit method called for ' + e.target.value);
+  }
+
+  handleInputChange = (e) => {
+    this.setState({newPlace: e.target.value});
   }
 
   render() {
@@ -27,7 +32,7 @@ class App extends Component {
         </div>
         <PlaceList places={this.state.places}/>
         <div className="App-footer">Footer</div>
-        <PlaceForm handleSubmit={this.handleSubmit}/>
+        <PlaceForm handleSubmit={this.handleSubmit} handleInputChange={this.handleInputChange} newPlace={this.state.newPlace}/>
       </div>
     );
   }
