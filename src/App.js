@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PlaceList } from './components/place';
+import { PlaceList, PlaceForm } from './components/place';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,6 +12,7 @@ class App extends Component {
         </div>
         <PlaceList />
         <div className="App-footer">Footer</div>
+        <PlaceForm />
       </div>
     );
   }
