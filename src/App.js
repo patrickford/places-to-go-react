@@ -12,7 +12,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const places = [{id: 10101, name:"Mama's", location:'san francisco'}, {id: 10102, name:"Burgers", location:'san'},{id: 10103, name:"Gott's", location:'francisco'}];
+    const places = [
+      {id: 10101, name:"Mama's", location:'san francisco'},
+      {id: 10102, name:"Burgers", location:'san'},
+      {id: 10103, name:"Gott's", location:'francisco'}];
     this.setState({places});
   }
 
