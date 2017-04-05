@@ -4,6 +4,12 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('handleSubmit method called!');
+  }
+
   render() {
     return (
       <div className="App">
@@ -12,7 +18,7 @@ class App extends Component {
         </div>
         <PlaceList />
         <div className="App-footer">Footer</div>
-        <PlaceForm />
+        <PlaceForm handleSubmit={this.handleSubmit}/>
       </div>
     );
   }
