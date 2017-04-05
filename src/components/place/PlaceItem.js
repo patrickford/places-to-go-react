@@ -5,7 +5,10 @@ export const PlaceItem = (props) => {
     <div className='Place-Item'>
       <span>
         <label>City: {props.location} </label>
-      </span><input type='text' value={props.name}/>
+      </span>
+      <span>
+        <input type='text' value={props.name}/>
+      </span>
     </div>
   )
 }

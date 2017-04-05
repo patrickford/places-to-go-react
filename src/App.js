@@ -11,7 +11,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
         <p className="App-intro">
-          <h2><PlaceList /></h2>
+          <PlaceList />
         </p>
       </div>
     );
