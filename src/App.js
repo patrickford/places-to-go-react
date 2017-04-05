@@ -18,6 +18,11 @@ class App extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const newPlace = this.state.newPlace;
+    const newPlacesList = [...this.state.places, newPlace];
+    this.setState({
+      places: newPlacesList,
+      newPlace: {name: '', location: ''}
+    })
     console.log('handleSubmit method called for ' + this.state.newPlace.name);
   }
 
