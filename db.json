@@ -1,0 +1,19 @@
+{
+  "places": [
+    {
+      "id": 10101,
+      "name":"Mama's",
+      "location":"San Francisco"
+    },
+    {
+      "id": 10102,
+      "name":"Burgers",
+      "location":"San Francisco"
+    },
+    {
+      "id": 10103,
+      "name":"Gott's",
+      "location":"San Francisco"
+      }
+    ]
+}
