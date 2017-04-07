@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { PlaceList, PlaceForm } from './components/place';
 import logo from './logo.svg';
 import { generateId } from './lib/placehelpers';
+import { loadPlaces } from './lib/placesService';
 import './App.css';
 
 class App extends Component {
@@ -12,11 +13,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const places = [
-      {id: 10101, name:"Mama's", location:'san francisco'},
-      {id: 10102, name:"Burgers", location:'san'},
-      {id: 10103, name:"Gott's", location:'francisco'}];
-    this.setState({places});
+    loadPlaces()
+      .then(places => this.setState({places}));
   }
 
   handleSubmit = (e) => {
