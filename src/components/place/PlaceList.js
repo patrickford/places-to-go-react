@@ -9,3 +9,7 @@ export const PlaceList = (props) => {
     </div>
   )
 }
+
+PlaceList.propTypes = {
+  places: React.PropTypes.array.isRequired
+}

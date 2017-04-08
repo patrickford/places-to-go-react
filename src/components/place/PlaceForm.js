@@ -10,3 +10,9 @@ export const PlaceForm = (props) => (
       />
   </form>
 )
+
+PlaceForm.propTypes = {
+  handleSubmit: React.PropTypes.func.isRequired,
+  handleInputChange: React.PropTypes.func.isRequired,
+  name: React.PropTypes.string.isRequired
+}

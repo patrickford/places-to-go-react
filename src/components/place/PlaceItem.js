@@ -12,3 +12,8 @@ export const PlaceItem = (props) => {
     </div>
   )
 }
+
+PlaceItem.propTypes = {
+  name: React.PropTypes.string.isRequired,
+  location: React.PropTypes.string.isRequired
+}
