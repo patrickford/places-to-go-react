@@ -13,5 +13,5 @@ export const createPlace = (place) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(place)
-  }).then(res => place.json())
+  }).then(res => res.json())
 }

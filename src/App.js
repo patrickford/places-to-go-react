@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { PlaceList, PlaceForm } from './components/place';
 import logo from './logo.svg';
 import { generateId } from './lib/placehelpers';
-import { loadPlaces } from './lib/placesService';
+import { loadPlaces, createPlace } from './lib/placesService';
 import './App.css';
 
 class App extends Component {
@@ -20,17 +20,20 @@ class App extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const newPlace = this.state.newPlace;
+    console.log(newPlace);
     const newPlacesList = [...this.state.places, newPlace];
     this.setState({
       places: newPlacesList,
       newPlace: {name: '', location: ''}
     })
     console.log('handleSubmit method called for ' + this.state.newPlace.id);
+    createPlace(newPlace)
+      .then(() => this.showTempMessage('New Todo Added'));;
   }
 
   handleInputChange = (e) => {
     const newId = generateId();
-    this.setState({newPlace: {id: newId, name: e.target.value, location: ''}});
+    this.setState({newPlace: {id: newId, name: e.target.value, location: 'San Francisco'}});
   }
 
   render() {
